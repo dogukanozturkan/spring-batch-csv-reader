@@ -9,9 +9,7 @@ import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.stereotype.Component;
 
-@Component
 public class CreditReader extends FlatFileItemReader<Credit> {
 
     public CreditReader() {
