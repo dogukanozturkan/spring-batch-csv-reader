@@ -1,0 +1,38 @@
+﻿accountId;date;currencyCode;creditDebet;amount;counterAccount;description;VAT;type
+NL11INGB0123456789;15/02/2019;EUR;D;6275;Shareholders;Profit to share;0.00;Profit
+NL11INGB0123456789;12/02/2019;EUR;D;55,44;Insurance Company;Insurance premium;0.00;Regular
+NL11INGB0123456789;01/02/2019;EUR;D;2,5;Bank;Bank account costs;0.21;Regular
+NL11INGB0123456789;22/01/2019;EUR;D;3,63;Hosting Company;Hosting costs - domain + email;0.21;Regular
+NL11INGB0123456789;15/01/2019;EUR;D;12500;Shareholders;Profit to share;0.00;Profit
+NL11INGB0123456789;14/01/2019;EUR;D;55,44;Insurance Company;Insurance premium;0.00;Regular
+NL11INGB0123456789;02/01/2019;EUR;D;2,5;Bank;Bank account costs;0.21;Regular
+NL11INGB0123456789;31/12/2018;EUR;D;99;Insurance Company;Insurance registration costs;0.00;Profit
+NL11INGB0123456789;31/12/2018;EUR;D;199;Insurance Company;Insurance registration costs;0.00;Profit
+NL11INGB0123456789;24/12/2018;EUR;D;3,63;Hosting Company;Hosting costs - domain + email;0.21;Regular
+NL11INGB0123456789;12/12/2018;EUR;D;8000;Shareholders;Profit to share;0.00;Profit
+NL11INGB0123456789;11/12/2018;EUR;D;110,9;Insurance Company;Insurance premium;0.00;Regular
+NL11INGB0123456789;03/12/2018;EUR;D;2,5;Bank;Bank account costs;0.21;Regular
+NL11INGB0123456789;22/11/2018;EUR;D;3,63;Hosting Company;Hosting costs - domain + email;0.21;Regular
+NL11INGB0123456789;19/11/2018;EUR;D;12;Parking Company;Parking costs;0.21;Regular
+NL11INGB0123456789;06/11/2018;EUR;D;11500;Shareholders;Profit to share;0.00;Profit
+NL11INGB0123456789;01/11/2018;EUR;D;2,5;Bank;Bank account costs;0.21;Regular
+NL11INGB0123456789;22/10/2018;EUR;D;3,63;Hosting Company;Hosting costs - domain + email;0.21;Regular
+NL11INGB0123456789;08/10/2018;EUR;D;10000;Shareholders;Profit to share;0.00;Profit
+NL11INGB0123456789;02/10/2018;EUR;D;6000;Shareholders;Profit to share;0.00;Profit
+NL11INGB0123456789;01/10/2018;EUR;D;2,5;Bank;Bank account costs;0.21;Regular
+NL11INGB0123456789;24/09/2018;EUR;D;3,63;Hosting Company;Hosting costs - domain + email;0.21;Regular
+NL11INGB0123456789;05/09/2018;EUR;D;660;Shareholders;Profit to share;0.00;Profit
+NL11INGB0123456789;05/09/2018;EUR;D;11000;Shareholders;Profit to share;0.00;Profit
+NL11INGB0123456789;03/09/2018;EUR;D;2,5;Bank;Bank account costs;0.21;Regular
+NL11INGB0123456789;22/08/2018;EUR;D;3,63;Hosting Company;Hosting costs - domain + email;0.21;Regular
+NL11INGB0123456789;09/08/2018;EUR;D;104;Parking Company;Parking costs;0.21;Regular
+NL11INGB0123456789;01/08/2018;EUR;D;2,5;Bank;Bank account costs;0.21;Regular
+NL11INGB0123456789;23/07/2018;EUR;D;3,63;Hosting Company;Hosting costs - domain + email;0.21;Regular
+NL11INGB0123456789;13/07/2018;EUR;D;4500;Shareholders;Profit to share;0.00;Profit
+NL11INGB0123456789;04/07/2018;EUR;D;96;Parking Company;Parking costs;0.21;Regular
+NL11INGB0123456789;03/07/2018;EUR;D;2,5;Bank;Bank account costs;0.21;Regular
+NL11INGB0123456789;22/06/2018;EUR;D;3,63;Hosting Company;Hosting costs - domain + email;0.21;Regular
+NL11INGB0123456789;14/06/2018;EUR;D;3019,99;Electronics Company;Electronics - laptop;0.21;Investment
+NL11INGB0123456789;14/06/2018;EUR;D;7000;Shareholders;Profit to share;0.00;Profit
+NL11INGB0123456789;14/06/2018;EUR;D;2099;Electronics Company;Electronics - laptop;0.21;Investment
+NL11INGB0123456789;12/06/2018;EUR;D;165,99;Electronics Company;Electronics - screen;0.21;Investment
