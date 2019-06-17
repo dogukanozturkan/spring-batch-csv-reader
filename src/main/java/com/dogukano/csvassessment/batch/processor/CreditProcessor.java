@@ -2,22 +2,17 @@ package com.dogukano.csvassessment.batch.processor;
 
 import com.dogukano.csvassessment.model.Credit;
 import com.dogukano.csvassessment.model.Record;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.item.ItemProcessor;
-import org.springframework.stereotype.Component;
 
-@Component
+@Slf4j
 public class CreditProcessor implements ItemProcessor<Credit, Record> {
-
-    public CreditProcessor() {
-    }
 
     @Override
     public Record process(Credit credit) throws Exception {
-        // TODO Get Credit and Check
-        /*  -> is Empty
-        *   -> is Valid
-        *   And Convert to Record
-        */
-        return null;
+        final Record transformedRecord = new Record();
+        transformedRecord.setAccountId(credit.getAccountId());
+        log.info("Transformed");
+        return transformedRecord;
     }
 }
