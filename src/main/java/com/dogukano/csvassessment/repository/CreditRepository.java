@@ -11,5 +11,5 @@ public interface CreditRepository extends JpaRepository<Credit, Long> {
 
     BigDecimal calculateStatementByRange(Range<Date> range);
 
-    CreditReport findByRange(Range<Date> range);
+    CreditReport findQuarterlyReportsByRange(Range<Date> range);
 }

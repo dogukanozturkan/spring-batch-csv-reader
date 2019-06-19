@@ -21,12 +21,16 @@ public class StatementReport {
 
     @JsonProperty("creditTotal")
     public BigDecimal creditTotal;
+
     @JsonProperty("debitTotal")
     public BigDecimal debitTotal;
+
     @JsonProperty("subtractedAmount")
     public BigDecimal subtractedAmount;
+
     @JsonProperty("currency")
     public String currency;
+
     @JsonProperty("status")
     public String status;
 

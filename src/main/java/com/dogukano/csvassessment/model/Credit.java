@@ -29,28 +29,39 @@ import lombok.Data;
 })
 public class Credit {
 
-    @JsonProperty("accountId")
-    public String accountId;
-    @JsonProperty("date")
-    public Date date;
-    @JsonProperty("currencyCode")
-    public String currencyCode;
-    @JsonProperty("creditDebit")
-    public String creditDebit;
-    @JsonProperty("amount")
-    public BigDecimal amount;
-    @JsonProperty("counterAccount")
-    public String counterAccount;
-    @JsonProperty("Valutadatum")
-    public String valutadatum;
-    @JsonProperty("Description")
-    public String description;
-    @JsonProperty("VAT")
-    public Double vatRatio;
-    @JsonProperty("dateSent")
-    public Date dateSent;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
     private Long id;
+
+    @JsonProperty("accountId")
+    public String accountId;
+
+    @JsonProperty("date")
+    public Date date;
+
+    @JsonProperty("currencyCode")
+    public String currencyCode;
+
+    @JsonProperty("creditDebit")
+    public String creditDebit;
+
+    @JsonProperty("amount")
+    public BigDecimal amount;
+
+    @JsonProperty("counterAccount")
+    public String counterAccount;
+
+    @JsonProperty("valueDate")
+    public Date valueDate;
+
+    @JsonProperty("Description")
+    public String description;
+
+    @JsonProperty("VAT")
+    public Double vatRatio;
+
+    @JsonProperty("dateSent")
+    public Date dateSent;
+
 }

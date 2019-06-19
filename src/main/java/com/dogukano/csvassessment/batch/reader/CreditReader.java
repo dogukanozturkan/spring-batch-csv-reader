@@ -27,7 +27,7 @@ public class CreditReader extends FlatFileItemReader<Credit> {
 
         creditLineTokenizer.setDelimiter(";");
         creditLineTokenizer.setStrict(false);
-        creditLineTokenizer.setNames(ReportConstants.CreditIems);
+        creditLineTokenizer.setNames(ReportConstants.CreditItems);
 
         BeanWrapperFieldSetMapper<Credit> creditFieldSetMapper = new BeanWrapperFieldSetMapper<>();
         creditFieldSetMapper.setTargetType(Credit.class);

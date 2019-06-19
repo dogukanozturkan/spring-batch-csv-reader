@@ -10,8 +10,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.Singular;
 
-@Builder
 @Data
+@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
         "credits",
@@ -19,9 +19,10 @@ import lombok.Singular;
 })
 public class CreditReport {
 
-    @JsonProperty("credits")
     @Singular
+    @JsonProperty("credits")
     public List<Credit> credits;
+
     @JsonProperty("totalVAT")
     public TotalVat totalVAT;
 }

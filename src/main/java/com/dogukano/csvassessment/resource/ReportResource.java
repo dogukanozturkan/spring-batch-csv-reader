@@ -19,7 +19,8 @@ public class ReportResource {
     public Report getReport(@PathVariable("year") final int year,
             @PathVariable("quarter") final int quarter) {
 
-        return reportService.getQuarterlyReport(quarter, year);
+        return reportService.getQuarterReport(quarter, year);
+
     }
 
 }
