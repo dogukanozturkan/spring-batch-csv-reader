@@ -2,7 +2,6 @@ package com.dogukano.csvassessment.batch;
 
 import com.dogukano.csvassessment.model.Credit;
 import com.dogukano.csvassessment.model.Debit;
-import com.dogukano.csvassessment.model.Record;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -37,7 +36,7 @@ public class BatchConfig {
     @Bean
     Step creditRecordsStep() {
         return  stepBuilderFactory.get("creditRecordsStep")
-                .<Credit, Record> chunk(50)
+                .<Credit, Credit> chunk(50)
                 .reader(operations.creditReader())
                 .processor(operations.creditProcessor())
                 .writer(operations.recordWriter())
@@ -47,7 +46,7 @@ public class BatchConfig {
     @Bean
     Step debitRecordsStep() {
         return  stepBuilderFactory.get("debitRecordsStep")
-                .<Debit, Record> chunk(50)
+                .<Debit, Debit> chunk(50)
                 .reader(operations.debitReader())
                 .processor(operations.debitProcessor())
                 .writer(operations.recordWriter())

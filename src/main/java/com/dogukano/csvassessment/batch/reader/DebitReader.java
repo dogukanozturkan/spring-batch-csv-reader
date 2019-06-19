@@ -1,6 +1,6 @@
 package com.dogukano.csvassessment.batch.reader;
 
-import com.dogukano.csvassessment.Utils.SalesTaxConstants;
+import com.dogukano.csvassessment.utils.ReportConstants;
 import com.dogukano.csvassessment.model.Debit;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.LineMapper;
@@ -27,7 +27,7 @@ public class DebitReader extends FlatFileItemReader<Debit> {
 
         debitLineTokenizer.setDelimiter(";");
         debitLineTokenizer.setStrict(false);
-        debitLineTokenizer.setNames(SalesTaxConstants.DebitItems);
+        debitLineTokenizer.setNames(ReportConstants.DebitItems);
 
         BeanWrapperFieldSetMapper<Debit> debitFieldSetMapper = new BeanWrapperFieldSetMapper<>();
         debitFieldSetMapper.setTargetType(Debit.class);

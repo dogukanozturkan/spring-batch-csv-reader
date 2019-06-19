@@ -6,9 +6,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.util.List;
+import lombok.Builder;
 import lombok.Data;
+import lombok.Singular;
 
 @Data
+@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
         "debits",
@@ -16,6 +19,7 @@ import lombok.Data;
 })
 public class DebitReport {
 
+    @Singular
     @JsonProperty("debits")
     public List<Debit> debits;
     @JsonProperty("totalVAT")
