@@ -20,12 +20,14 @@ import lombok.Data;
         "date",
         "currencyCode",
         "creditDebit",
-        "amount",
+        "vatIncluded",
+        "excludingVat",
+        "totalAmount",
         "counterAccount",
-        "Valutadatum",
+        "valueDate",
         "Description",
         "VAT",
-        "dateSent"
+        "dateSent",
 })
 public class Credit {
 
@@ -46,8 +48,8 @@ public class Credit {
     @JsonProperty("creditDebit")
     public String creditDebit;
 
-    @JsonProperty("amount")
-    public BigDecimal amount;
+    @JsonProperty("vatIncluded")
+    public BigDecimal vatIncluded;
 
     @JsonProperty("counterAccount")
     public String counterAccount;
@@ -63,5 +65,11 @@ public class Credit {
 
     @JsonProperty("dateSent")
     public Date dateSent;
+
+    @JsonProperty("excludingVat")
+    public BigDecimal excludingVat;
+
+    @JsonProperty("totalAmount")
+    public BigDecimal totalAmount;
 
 }
