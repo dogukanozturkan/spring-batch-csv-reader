@@ -1,10 +1,10 @@
-package com.dogukano.csvassessment.service.adapter;
+package com.dogukano.csvassessment.service;
 
 import com.google.common.collect.Range;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public interface TransactionAdapter<T> extends ReportServiceAdapter<T>{
+public interface TransactionService<T> {
 
     T getReport(Range<Date> range);
 
