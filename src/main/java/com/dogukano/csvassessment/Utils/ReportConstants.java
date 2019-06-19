@@ -10,9 +10,9 @@ public class ReportConstants {
     private static final String DATE = "date";
     private static final String CURRENCY_CODE = "currencyCode";
     private static final String CREDIT_DEBIT = "creditDebit";
-    private static final String AMOUNT = "amount";
+    private static final String AMOUNT = "vatIncluded";
     private static final String COUNTER_ACCOUNT = "counterAccount";
-    private static final String VALUTADATUM = "Valutadatum";
+    private static final String VALUTADATUM = "Valutadatum"; // Value Date
     private static final String DESCRIPTION = "Description";
     private static final String VAT = "VAT";
     private static final String DATE_SENT = "dateSent";
