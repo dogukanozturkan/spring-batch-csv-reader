@@ -1,22 +1,15 @@
-package com.dogukano.csvassessment.service;
+package com.dogukano.csvassessment.service.imp;
 
-import com.dogukano.csvassessment.model.Credit;
-import com.dogukano.csvassessment.model.TotalVat;
-import com.dogukano.csvassessment.utils.ReportConstants;
-import com.dogukano.csvassessment.utils.ReportUtils;
 import com.dogukano.csvassessment.model.reports.CreditReport;
 import com.dogukano.csvassessment.model.reports.DebitReport;
 import com.dogukano.csvassessment.model.reports.Report;
 import com.dogukano.csvassessment.model.reports.StatementReport;
-import com.dogukano.csvassessment.repository.CreditRepository;
-import com.dogukano.csvassessment.repository.DebitRepository;
 import com.dogukano.csvassessment.service.ReportService;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.dogukano.csvassessment.utils.ReportConstants;
+import com.dogukano.csvassessment.utils.ReportUtils;
 import com.google.common.collect.Range;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,13 +20,13 @@ public class QuarterReportService implements ReportService {
     private ReportUtils reportUtils;
 
     @Autowired
-    private CreditRepository creditRepository;
+    private CreditService creditService;
 
     @Autowired
-    private DebitRepository debitRepository;
+    private DebitService debitService;
 
     @Override
-    public Report getQuarterlyReport(int year, int quarter) {
+    public Report getQuarterReport(int year, int quarter) {
 
         Range<Date> range = reportUtils.getRange(year, quarter);
 
@@ -47,17 +40,17 @@ public class QuarterReportService implements ReportService {
     }
 
     private CreditReport getCreditsReport(Range<Date> range) {
-        return creditRepository.findByRange(range);
+        return creditService.getReport(range);
     }
 
     private DebitReport getDebitReport(Range<Date> range) {
-        return debitRepository.findByRange(range);
+        return debitService.getReport(range);
     }
 
     private StatementReport getStatementReport(Range<Date> range) {
 
-        BigDecimal creditTotal = creditRepository.calculateStatementByRange(range);
-        BigDecimal debitTotal = debitRepository.calculateStatementByRange(range);
+        BigDecimal creditTotal = creditService.getStatement(range);
+        BigDecimal debitTotal = debitService.getStatement(range);
 
         return StatementReport.builder()
                 .creditTotal(creditTotal)

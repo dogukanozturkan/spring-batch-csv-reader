@@ -20,12 +20,16 @@ public class Report {
 
     @JsonProperty("year")
     public int year;
+
     @JsonProperty("quarter")
     public int quarter;
+
     @JsonProperty("creditReport")
     public CreditReport creditReport;
+
     @JsonProperty("debitReport")
     public DebitReport debitReport;
+
     @JsonProperty("statementReport")
     public StatementReport statementReport;
 

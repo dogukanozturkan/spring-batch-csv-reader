@@ -32,22 +32,31 @@ public class Debit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
     private Long id;
+
     @JsonProperty("accountId")
     public String accountId;
+
     @JsonProperty("date")
     public Date date;
+
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     @JsonProperty("creditDebit")
     public String creditDebit;
+
     @JsonProperty("amount")
     public BigDecimal amount;
+
     @JsonProperty("counterAccount")
     public String counterAccount;
+
     @JsonProperty("description")
     public String description;
+
     @JsonProperty("VAT")
     public Double vatRatio;
+
     @JsonProperty("type")
     public String type;
 
