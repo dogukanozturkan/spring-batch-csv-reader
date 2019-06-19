@@ -15,6 +15,7 @@ public class TotalVat {
 
     @JsonProperty("amount")
     public Double amount;
+
     @JsonProperty("currency")
     public String currency;
 

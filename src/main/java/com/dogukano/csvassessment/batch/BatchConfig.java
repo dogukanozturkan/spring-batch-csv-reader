@@ -39,7 +39,7 @@ public class BatchConfig {
                 .<Credit, Credit> chunk(50)
                 .reader(operations.creditReader())
                 .processor(operations.creditProcessor())
-                .writer(operations.recordWriter())
+                .writer(operations.creditWriter())
                 .build();
     }
 
@@ -49,7 +49,7 @@ public class BatchConfig {
                 .<Debit, Debit> chunk(50)
                 .reader(operations.debitReader())
                 .processor(operations.debitProcessor())
-                .writer(operations.recordWriter())
+                .writer(operations.debitWriter())
                 .build();
     }
 }
