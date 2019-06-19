@@ -1,6 +1,6 @@
 package com.dogukano.csvassessment.batch.reader;
 
-import com.dogukano.csvassessment.Utils.SalesTaxConstants;
+import com.dogukano.csvassessment.utils.ReportConstants;
 import com.dogukano.csvassessment.model.Credit;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.LineMapper;
@@ -27,7 +27,7 @@ public class CreditReader extends FlatFileItemReader<Credit> {
 
         creditLineTokenizer.setDelimiter(";");
         creditLineTokenizer.setStrict(false);
-        creditLineTokenizer.setNames(SalesTaxConstants.CreditIems);
+        creditLineTokenizer.setNames(ReportConstants.CreditIems);
 
         BeanWrapperFieldSetMapper<Credit> creditFieldSetMapper = new BeanWrapperFieldSetMapper<>();
         creditFieldSetMapper.setTargetType(Credit.class);

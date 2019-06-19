@@ -3,9 +3,11 @@ package com.dogukano.csvassessment.model.reports;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
         "year",
@@ -17,9 +19,9 @@ import lombok.Data;
 public class Report {
 
     @JsonProperty("year")
-    public String year;
+    public int year;
     @JsonProperty("quarter")
-    public String quarter;
+    public int quarter;
     @JsonProperty("creditReport")
     public CreditReport creditReport;
     @JsonProperty("debitReport")
