@@ -7,13 +7,18 @@ import org.springframework.batch.item.file.LineMapper;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 public class DebitReader extends FlatFileItemReader<Debit> {
 
+    @Value("{debit.path}")
+    private Resource resource;
+
     public DebitReader () {
-        this.setResource(new ClassPathResource("debit2018.csv"));
+        this.setResource(resource);
         this.setName("Debit-Reader");
         this.setLinesToSkip(1);
         this.setLineMapper(debitLineMapper());
@@ -25,7 +30,7 @@ public class DebitReader extends FlatFileItemReader<Debit> {
         DefaultLineMapper<Debit> debitDefaultLineMapper = new DefaultLineMapper<>();
         DelimitedLineTokenizer debitLineTokenizer = new DelimitedLineTokenizer();
 
-        debitLineTokenizer.setDelimiter(";");
+        debitLineTokenizer.setDelimiter("${csv.delimiter}");
         debitLineTokenizer.setStrict(false);
         debitLineTokenizer.setNames(ReportConstants.DebitItems);
 
