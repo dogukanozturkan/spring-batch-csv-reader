@@ -16,18 +16,19 @@ import org.springframework.context.annotation.Configuration;
 @EnableBatchProcessing
 public class BatchConfig {
 
-    @Autowired
-    public StepBuilderFactory stepBuilderFactory;
 
     @Autowired
-    public JobBuilderFactory jobBuilderFactory;
+    private JobBuilderFactory jobBuilderFactory;
 
     @Autowired
-    public BatchOperations operations;
+    private StepBuilderFactory stepBuilderFactory;
+
+    @Autowired
+    private BatchOperations operations;
 
     @Bean
     public Job csvReadJob() {
-        return jobBuilderFactory.get("csvReadjob").incrementer(new RunIdIncrementer())
+        return jobBuilderFactory.get("csvReadJob").incrementer(new RunIdIncrementer())
                 .start(creditRecordsStep())
                 .next(debitRecordsStep())
                 .build();
@@ -35,8 +36,8 @@ public class BatchConfig {
 
     @Bean
     Step creditRecordsStep() {
-        return  stepBuilderFactory.get("creditRecordsStep")
-                .<Credit, Credit> chunk(50)
+        return stepBuilderFactory.get("creditRecordsStep")
+                .<Credit, Credit>chunk(50)
                 .reader(operations.creditReader())
                 .processor(operations.creditProcessor())
                 .writer(operations.creditWriter())
@@ -45,8 +46,8 @@ public class BatchConfig {
 
     @Bean
     Step debitRecordsStep() {
-        return  stepBuilderFactory.get("debitRecordsStep")
-                .<Debit, Debit> chunk(50)
+        return stepBuilderFactory.get("debitRecordsStep")
+                .<Debit, Debit>chunk(50)
                 .reader(operations.debitReader())
                 .processor(operations.debitProcessor())
                 .writer(operations.debitWriter())

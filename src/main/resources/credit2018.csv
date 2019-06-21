@@ -1,4 +1,4 @@
-﻿accountId;date;currencyCode;creditDebit;amount;counterAccount;Valutadatum;Description;VAT;dateSent
+﻿accountId;date;currencyCode;creditDebit;amount;counterAccount;valueDate;Description;VAT;dateSent
 NL11INGB0123456789;15/02/2019;EUR;C;10345,5;Client A;15/02/2019;Invoice013;0.21;04/01/2019
 NL11INGB0123456789;05/02/2019;EUR;C;7065,33;Client B;05/02/2019;invoice012;0.21;31/01/2019
 NL11INGB0123456789;15/01/2019;EUR;C;14792,25;Client A;15/01/2019;invoice011;0.21;04/12/2018

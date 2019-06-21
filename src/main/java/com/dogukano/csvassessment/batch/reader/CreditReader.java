@@ -7,13 +7,19 @@ import org.springframework.batch.item.file.LineMapper;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 public class CreditReader extends FlatFileItemReader<Credit> {
 
+    @Value("${credit.path}")
+    private Resource resource;
+
+
     public CreditReader() {
-        this.setResource(new ClassPathResource("credit2018.csv"));
+        this.setResource(resource);
         this.setName("Credit-Reader");
         this.setLinesToSkip(1);
         this.setLineMapper(creditLineMapper());
@@ -25,7 +31,7 @@ public class CreditReader extends FlatFileItemReader<Credit> {
         DefaultLineMapper<Credit> creditDefaultLineMapper = new DefaultLineMapper<>();
         DelimitedLineTokenizer creditLineTokenizer = new DelimitedLineTokenizer();
 
-        creditLineTokenizer.setDelimiter(";");
+        creditLineTokenizer.setDelimiter("${csv.delimiter}");
         creditLineTokenizer.setStrict(false);
         creditLineTokenizer.setNames(ReportConstants.CreditItems);
 
