@@ -18,7 +18,7 @@ public class DebitReader extends FlatFileItemReader<Debit> {
     private Resource resource;
 
     public DebitReader () {
-        this.setResource(resource);
+        this.setResource(new ClassPathResource("${debit.path}"));
         this.setName("Debit-Reader");
         this.setLinesToSkip(1);
         this.setLineMapper(debitLineMapper());

@@ -1,25 +1,21 @@
 package com.dogukano.csvassessment.batch.reader;
 
-import com.dogukano.csvassessment.utils.ReportConstants;
 import com.dogukano.csvassessment.model.Credit;
+import com.dogukano.csvassessment.utils.ReportConstants;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.LineMapper;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
+
 
 public class CreditReader extends FlatFileItemReader<Credit> {
 
-    @Value("${credit.path}")
-    private Resource resource;
-
 
     public CreditReader() {
-        this.setResource(resource);
+        this.setResource(new ClassPathResource("${credit.path}"));
         this.setName("Credit-Reader");
         this.setLinesToSkip(1);
         this.setLineMapper(creditLineMapper());
