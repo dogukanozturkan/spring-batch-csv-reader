@@ -1,4 +1,4 @@
-﻿accountId;date;currencyCode;creditDebet;amount;counterAccount;description;VAT;type
+﻿accountId;date;currencyCode;creditDebit;amount;counterAccount;description;VAT;type
 NL11INGB0123456789;15/02/2019;EUR;D;6275;Shareholders;Profit to share;0.00;Profit
 NL11INGB0123456789;12/02/2019;EUR;D;55,44;Insurance Company;Insurance premium;0.00;Regular
 NL11INGB0123456789;01/02/2019;EUR;D;2,5;Bank;Bank account costs;0.21;Regular
