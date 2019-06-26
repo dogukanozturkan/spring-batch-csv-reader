@@ -1,5 +1,6 @@
 package com.dogukano.csvassessment.utils;
 
+import com.dogukano.csvassessment.model.Debit;
 import com.google.common.collect.Range;
 import java.time.ZoneId;
 import java.util.Date;
@@ -22,5 +23,12 @@ public class ReportUtils {
                 .toInstant());
 
         return Range.closed(startDate, endDate);
+    }
+
+    public Debit calculateTax(Debit debit) {
+
+        
+
+        return debit;
     }
 }
